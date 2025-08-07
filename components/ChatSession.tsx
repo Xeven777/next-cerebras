@@ -5,7 +5,7 @@ import Markdown from "react-markdown";
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import groqpic from "@/assets/groq.jpg";
+import cerebraspic from "@/assets/cerebras.jpeg";
 import sparkles from "@/assets/Sparkle.svg";
 import send from "@/assets/send.svg";
 import robo from "@/assets/Robo.svg";
@@ -80,7 +80,7 @@ export function ChatSession({
 
   return (
     <>
-      <div className="flex-1 overflow-y-auto rounded-xl bg-neutral-200 p-4 text-sm leading-6 text-neutral-900 dark:bg-neutral-800/60 dark:text-neutral-300 sm:text-base sm:leading-7 border border-orange-600/20 h-full">
+      <div className="flex-1 overflow-y-auto rounded-xl bg-zinc-200 p-4 text-sm leading-6 text-zinc-900 dark:bg-zinc-800/40 dark:text-zinc-300 sm:text-base sm:leading-7 border border-red-600/20 h-full">
         {messages.length > 0 ? (
           messages.map((m) => (
             <div key={m.id} className="whitespace-pre-wrap">
@@ -102,11 +102,11 @@ export function ChatSession({
                   </div>
                 </div>
               ) : (
-                <div className="mb-4 flex rounded-xl bg-neutral-50 px-2 py-6 dark:bg-neutral-900 sm:px-4 relative">
+                <div className="mb-4 flex rounded-xl bg-zinc-50 px-2 py-6 dark:bg-zinc-900 sm:px-4 relative">
                   <Image
-                    alt="groq"
+                    alt="model"
                     className="mr-2 flex size-6 md:size-8 rounded-full sm:mr-4"
-                    src={groqpic}
+                    src={cerebraspic}
                     placeholder="blur"
                     width={32}
                     height={32}
@@ -117,9 +117,9 @@ export function ChatSession({
                         return (
                           <div
                             key={`${m.id}-reasoning`}
-                            className="text-sm mb-3 p-3 border rounded-lg bg-stone-100 text-stone-600 dark:bg-stone-900 dark:text-stone-400 border-none"
+                            className="text-sm mb-3 p-3 border rounded-lg bg-zinc-100 text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400 border-none"
                           >
-                            <p className="text-orange-500 animate-pulse p-1">
+                            <p className="text-red-500 animate-pulse p-1">
                               Thinking...
                             </p>
                             <Markdown>{part.text}</Markdown>
@@ -134,9 +134,9 @@ export function ChatSession({
                               parsed.reasoning.map((reasoningText, index) => (
                                 <div
                                   key={`${m.id}-parsed-reasoning-${index}`}
-                                  className="text-sm mb-3 p-3 border rounded-lg bg-stone-100 text-stone-600 dark:bg-stone-900 dark:text-stone-400 border-none"
+                                  className="text-sm mb-3 p-3 border rounded-lg bg-zinc-100 text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400 border-none"
                                 >
-                                  <p className="text-orange-500 animate-pulse p-1">
+                                  <p className="text-red-500 animate-pulse p-1">
                                     Thinking...
                                   </p>
                                   <Markdown>{reasoningText}</Markdown>
@@ -151,7 +151,7 @@ export function ChatSession({
                       return null;
                     })}
                     {responseTimes[m.id] && (
-                      <div className="text-xs text-neutral-500 mt-2">
+                      <div className="text-xs text-zinc-500 mt-2">
                         Response time: {responseTimes[m.id].toFixed(3)}s
                       </div>
                     )}
@@ -159,7 +159,7 @@ export function ChatSession({
                   <button
                     type="button"
                     title="copy"
-                    className="absolute top-2 right-2 p-1 rounded-full bg-orange-500 dark:bg-neutral-800 transition-all active:scale-95 opacity-50 hover:opacity-75"
+                    className="absolute top-2 right-2 p-1 rounded-full bg-red-500 dark:bg-zinc-800 transition-all active:scale-95 opacity-50 hover:opacity-75"
                     onClick={() => {
                       const textContent = m.parts
                         .filter((part) => part.type === "text")
@@ -180,11 +180,11 @@ export function ChatSession({
           ))
         ) : (
           <div className="flex flex-col items-center justify-center h-full">
-            <p className="text-xl md:text-2xl px-2 font-semibold text-center mx-auto text-stone-500 dark:text-stone-400 tracking-wide">
+            <p className="text-xl md:text-2xl px-2 font-semibold text-center mx-auto text-zinc-500 dark:text-zinc-400 tracking-wide">
               Start Chatting with
               <br />
-              <span className="text-orange-500 text-2xl md:text-4xl">
-                Groq
+              <span className="text-red-500 text-2xl md:text-4xl">
+                Cerebras
               </span>{" "}
               .AI Now!
             </p>
@@ -205,7 +205,7 @@ export function ChatSession({
               width={22}
               className="animate-pulse"
             />
-            <span className="text-orange-500 animate-pulse">Generating...</span>
+            <span className="text-red-500 animate-pulse">Generating...</span>
           </div>
         )}
         {error && (
@@ -221,7 +221,7 @@ export function ChatSession({
         <div className="relative">
           <textarea
             id="chat-input"
-            className="block caret-orange-600 w-full rounded-xl border-none bg-neutral-200 p-4 pl-2 pr-20 text-sm text-neutral-900 focus:outline-hidden focus:ring-2 focus:ring-orange-500 dark:bg-neutral-800 dark:text-neutral-200 sm:text-base resize-y"
+            className="block caret-red-600 w-full rounded-xl border-none bg-zinc-200 p-4 pl-2 pr-20 text-sm text-zinc-900 focus:outline-hidden focus:ring-2 focus:ring-red-500 dark:bg-zinc-800 dark:text-zinc-200 sm:text-base resize-y"
             placeholder="Enter your prompt"
             rows={1}
             value={input}
@@ -232,7 +232,7 @@ export function ChatSession({
           <button
             type="submit"
             disabled={isLoading}
-            className="absolute bottom-2 right-2.5 rounded-lg px-4 py-2 text-sm font-medium text-neutral-200 bg-orange-600 hover:bg-orange-700 dark:focus:ring-orange-800 sm:text-base flex items-center gap-2 active:scale-95 transition-all"
+            className="absolute bottom-2 right-2.5 rounded-lg px-4 py-2 text-sm font-medium text-zinc-200 bg-red-600 hover:bg-red-700 dark:focus:ring-red-800 sm:text-base flex items-center gap-2 active:scale-95 transition-all"
           >
             {isLoading ? (
               <>

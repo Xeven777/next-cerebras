@@ -30,12 +30,12 @@ const Chatbox = memo(({ userIp }: { userIp: string }) => {
         input={input}
         setInput={setInput}
         modelControls={
-          <div className="flex w-full gap-x-2 overflow-x-auto whitespace-nowrap text-xs text-neutral-600 dark:text-neutral-300 sm:text-sm scrollbar-hide shrink-0">
+          <div className="flex w-full gap-x-2 overflow-x-auto whitespace-nowrap text-xs text-zinc-600 dark:text-zinc-300 sm:text-sm scrollbar-hide shrink-0">
             <select
               name="model"
               title="Select Model"
               id="model-select"
-              className="block w-full min-w-44 rounded-xl border-none bg-neutral-200 p-4 text-sm text-neutral-900 focus:outline-hidden focus:ring-2 focus:ring-orange-500 dark:bg-neutral-800 dark:text-neutral-200 dark:focus:ring-orange-500 sm:text-base"
+              className="block w-full min-w-44 rounded-xl border-none bg-zinc-200 p-4 text-sm text-zinc-900 focus:outline-hidden focus:ring-2 focus:ring-red-500 dark:bg-zinc-800 dark:text-zinc-200 dark:focus:ring-red-500 sm:text-base"
               value={selectedModel}
               onChange={handleModelChange}
             >
@@ -50,7 +50,7 @@ const Chatbox = memo(({ userIp }: { userIp: string }) => {
               onClick={() =>
                 window.open("https://img-gen7.netlify.app/", "_blank")
               }
-              className="rounded-lg hover:bg-linear-to-br from-orange-600 to-rose-600 p-2 hover:text-white transition-all active:scale-105 border border-orange-600 font-semibold"
+              className="rounded-lg hover:bg-linear-to-br from-red-600 to-rose-600 p-2 hover:text-white transition-all active:scale-105 border border-red-600 font-semibold"
             >
               Generate Image ✨
             </button>
@@ -59,7 +59,7 @@ const Chatbox = memo(({ userIp }: { userIp: string }) => {
               onClick={() =>
                 handleSuggestionClick("Make it Shorter and simpler.")
               }
-              className="rounded-lg bg-neutral-200 p-2 hover:bg-orange-600 hover:text-neutral-200 dark:bg-neutral-800 dark:hover:bg-orange-600 dark:hover:text-neutral-50 transition-all active:scale-105"
+              className="rounded-lg bg-zinc-200 p-2 hover:bg-red-600 hover:text-zinc-200 dark:bg-zinc-800 dark:hover:bg-red-600 dark:hover:text-zinc-50 transition-all active:scale-105"
             >
               Make Shorter
             </button>
@@ -67,7 +67,7 @@ const Chatbox = memo(({ userIp }: { userIp: string }) => {
               onClick={() =>
                 handleSuggestionClick("Make it longer. explain it nicely")
               }
-              className="rounded-lg bg-neutral-200 p-2 hover:bg-orange-600 hover:text-neutral-200 dark:bg-neutral-800 dark:hover:bg-orange-600 dark:hover:text-neutral-50 transition-all active:scale-105"
+              className="rounded-lg bg-zinc-200 p-2 hover:bg-red-600 hover:text-zinc-200 dark:bg-zinc-800 dark:hover:bg-red-600 dark:hover:text-zinc-50 transition-all active:scale-105"
             >
               Make Longer
             </button>
@@ -75,7 +75,7 @@ const Chatbox = memo(({ userIp }: { userIp: string }) => {
               onClick={() =>
                 handleSuggestionClick("Write it in a more professional tone.")
               }
-              className="rounded-lg bg-neutral-200 p-2 hover:bg-orange-600 hover:text-neutral-200 dark:bg-neutral-800 dark:hover:bg-orange-600 dark:hover:text-neutral-50 transition-all active:scale-105"
+              className="rounded-lg bg-zinc-200 p-2 hover:bg-red-600 hover:text-zinc-200 dark:bg-zinc-800 dark:hover:bg-red-600 dark:hover:text-zinc-50 transition-all active:scale-105"
             >
               More Professional
             </button>
@@ -85,13 +85,13 @@ const Chatbox = memo(({ userIp }: { userIp: string }) => {
                   "Write it in a more casual and light tone."
                 )
               }
-              className="rounded-lg bg-neutral-200 p-2 hover:bg-orange-600 hover:text-neutral-200 dark:bg-neutral-800 dark:hover:bg-orange-600 dark:hover:text-neutral-50 transition-all active:scale-105"
+              className="rounded-lg bg-zinc-200 p-2 hover:bg-red-600 hover:text-zinc-200 dark:bg-zinc-800 dark:hover:bg-red-600 dark:hover:text-zinc-50 transition-all active:scale-105"
             >
               More Casual
             </button>
             <button
               onClick={() => handleSuggestionClick("Paraphrase it")}
-              className="rounded-lg bg-neutral-200 p-2 hover:bg-orange-600 hover:text-neutral-200 dark:bg-neutral-800 dark:hover:bg-orange-600 dark:hover:text-neutral-50 transition-all active:scale-105"
+              className="rounded-lg bg-zinc-200 p-2 hover:bg-red-600 hover:text-zinc-200 dark:bg-zinc-800 dark:hover:bg-red-600 dark:hover:text-zinc-50 transition-all active:scale-105"
             >
               Paraphrase
             </button>

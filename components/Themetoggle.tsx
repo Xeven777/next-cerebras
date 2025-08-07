@@ -7,7 +7,7 @@ export default function ThemeTogglebutton() {
   const { theme, setTheme } = useTheme();
   return (
     <button
-      className="absolute top-1 md:top-2 md:left-8 left-0 z-30 active:rotate-12 transition-all rounded-full p-2 bg-neutral-200/20 backdrop-blur-sm dark:bg-neutral-800/30 border shadow-sm dark:border-neutral-600/50 hover:bg-orange-600 active:scale-105"
+      className="absolute top-1 md:top-2 md:left-8 left-0 z-30 active:rotate-12 transition-all rounded-full p-2 bg-zinc-200/20 backdrop-blur-sm dark:bg-zinc-800/30 border shadow-sm dark:border-zinc-600/50 hover:bg-red-600 active:scale-105"
       title="Toggle Theme"
       type="button"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

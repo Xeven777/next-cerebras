@@ -41,13 +41,13 @@ select {
   border-radius: 4px;
 }
 #pic {
-  filter: drop-shadow(2px 6px 12px rgba(100, 51, 30, 0.4));
+  filter: drop-shadow(2px 6px 12px rgba(100, 30, 30, 0.4));
 }
 #pic:hover {
-  filter: drop-shadow(2px 6px 12px rgba(132, 70, 43, 0.65));
+  filter: drop-shadow(2px 6px 12px rgba(132, 43, 43, 0.65));
 }
 ::selection {
-  background: #d03e09;
+  background: #d00909;
   color: white;
 }
 
@@ -97,7 +97,7 @@ select {
 
 /* Links */
 .markdown-body a {
-  @apply text-orange-500;
+  @apply text-red-500;
   text-decoration: none;
 }
 
@@ -114,7 +114,7 @@ select {
 }
 
 .markdown-body blockquote {
-  border-left: 4px solid #957b5d;
+  border-left: 4px solid #955d5d;
   margin-left: 0;
   margin-right: 0;
   padding-left: 15px;
@@ -123,7 +123,7 @@ select {
 
 .markdown-body pre {
   background-color: #464646dc;
-  border-left: 3px solid #e3843b;
+  border-left: 3px solid #e33b3b;
   color: white;
   padding: 10px;
   overflow-x: auto;
