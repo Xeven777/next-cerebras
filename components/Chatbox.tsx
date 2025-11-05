@@ -4,9 +4,7 @@ import { models } from "@/lib/model";
 import { ChatSession } from "./ChatSession";
 
 const Chatbox = memo(({ userIp }: { userIp: string }) => {
-  const [selectedModel, setSelectedModel] = useState(
-    "llama-4-scout-17b-16e-instruct"
-  );
+  const [selectedModel, setSelectedModel] = useState("llama-3.3-70b");
   const [input, setInput] = useState("");
 
   const handleModelChange = useCallback(
