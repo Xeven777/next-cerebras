@@ -15,16 +15,11 @@ A lightning-fast ⚡ chat interface powered by Cerebras's API and built with Nex
 
 ## 🤖 Available Models
 
-- 🦙 Llama 4 Scout - 17B 16e (`llama-4-scout-17b-16e-instruct`)
 - ⚡ Llama 3.1 - 8B (`llama3.1-8b`)
 - 🦙 Llama 3.3 - 70B (`llama-3.3-70b`)
 - 🐦 Qwen 3 - 32B (`qwen-3-32b`)
-- ⚡ Llama 4 Maverick - 17B 128e (`llama-4-maverick-17b-128e-instruct`)
 - 🐦 Qwen 3 - 235B A22B Instruct 2507 (`qwen-3-235b-a22b-instruct-2507`)
-- 🐦 Qwen 3 - 235B A22B Thinking 2507 (`qwen-3-235b-a22b-thinking-2507`)
-- 🐦 Qwen 3 Coder - 480B (`qwen-3-coder-480b`)
 - 🤖 GPT OSS - 120B (`gpt-oss-120b`)
-- 🔍 Deepseek R1 Llama - 70B (`deepseek-r1-distill-llama-70b`)
 
 ## 🛠️ Getting Started
 
