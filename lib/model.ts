@@ -7,4 +7,5 @@ export const models = [
   { value: "qwen-3-32b", label: "🐦 Qwen 3 - 32B" },
   { value: "llama-3.3-70b", label: "🦙 Llama 3.3 - 70B" },
   { value: "llama3.1-8b", label: "⚡ Llama 3.1 - 8B" },
+  {value:"zai-glm-4.7",label:"🤖 Z.ai GLM 4.7"}
 ];
